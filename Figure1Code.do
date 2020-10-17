@@ -83,8 +83,10 @@ foreach var in $gendervars {
 		name(`var'_gender, replace) ///
 		xlabel(1975(5)2020) ylabel(.2(.2)1) ///
 		xtitle("Year") ytitle("Predicted Probability") title("") scheme(538w) ///
-		ci1opts(fintensity(50) lwidth(none)) ///
-		ci2opts(fintensity(50) lwidth(none)) ///
+		plot1opts(mcolor(blue) lcolor(blue)) ///
+		ci1opts(lcolor(blue) fcolor(blue) fintensity(50) lwidth(none)) ///
+		plot2opts (mcolor(red) lcolor(red)) ///
+		ci2opts(lcolor(red) fcolor(red) fintensity(50) lwidth(none)) ///
 		legend(order(4 "Women" 3 "Men") ring(0) position(4))
 }
 
